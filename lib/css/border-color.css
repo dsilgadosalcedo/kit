@@ -1,0 +1,241 @@
+@import "./liftkit-core.css";
+
+.border-color-primary {
+  border-color: var(--ddss-primary);
+}
+
+.border-color-onprimary {
+  border-color: var(--ddss-onprimary);
+}
+
+.border-color-primarycontainer {
+  border-color: var(--ddss-primarycontainer);
+}
+
+.border-color-onprimarycontainer {
+  border-color: var(--ddss-onprimarycontainer);
+}
+
+.border-color-secondary {
+  border-color: var(--ddss-secondary);
+}
+
+.border-color-onsecondary {
+  border-color: var(--ddss-onsecondary);
+}
+
+.border-color-secondarycontainer {
+  border-color: var(--ddss-secondarycontainer);
+}
+
+.border-color-onsecondarycontainer {
+  border-color: var(--ddss-onsecondarycontainer);
+}
+
+.border-color-tertiary {
+  border-color: var(--ddss-tertiary);
+}
+
+.border-color-ontertiary {
+  border-color: var(--ddss-ontertiary);
+}
+
+.border-color-tertiarycontainer {
+  border-color: var(--ddss-tertiarycontainer);
+}
+
+.border-color-ontertiarycontainer {
+  border-color: var(--ddss-ontertiarycontainer);
+}
+
+.border-color-error {
+  border-color: var(--ddss-error);
+}
+
+.border-color-onerror {
+  border-color: var(--ddss-onerror);
+}
+
+.border-color-errorcontainerv {
+  border-color: var(--ddss-errorcontainer);
+}
+
+.border-color-onerrorcontainer {
+  border-color: var(--ddss-onerrorcontainer);
+}
+
+.border-color-background {
+  border-color: var(--ddss-background);
+}
+
+.border-color-onbackground {
+  border-color: var(--ddss-onbackground);
+}
+
+.border-color-surface {
+  border-color: var(--ddss-surface);
+}
+
+.border-color-onsurface {
+  border-color: var(--ddss-onsurface);
+}
+
+.border-color-surfacevariant {
+  border-color: var(--ddss-surfacevariant);
+}
+
+.border-color-onsurfacevariant {
+  border-color: var(--ddss-onsurfacevariant);
+}
+
+.border-color-outline {
+  border-color: var(--ddss-outline);
+}
+
+.border-color-outlinevariant {
+  border-color: var(--ddss-outlinevariant);
+}
+
+.border-color-shadow {
+  border-color: var(--ddss-shadow);
+}
+
+.border-color-scrim {
+  border-color: var(--ddss-scrim);
+}
+
+.border-color-inversesurface {
+  border-color: var(--ddss-inversesurface);
+}
+
+.border-color-inverseonsurface {
+  border-color: var(--ddss-inverseonsurface);
+}
+
+.border-color-inverseprimary {
+  border-color: var(--ddss-inverseprimary);
+}
+
+.border-color-success {
+  border-color: var(--ddss-success);
+}
+
+.border-color-successcontainer {
+  border-color: var(--ddss-successcontainer);
+}
+
+.border-color-onsuccess {
+  border-color: var(--ddss-onsuccess);
+}
+
+.border-color-onsuccesscontainer {
+  border-color: var(--ddss-onsuccesscontainer);
+}
+
+.border-color-warning {
+  border-color: var(--ddss-warning);
+}
+
+.border-color-warningcontainer {
+  border-color: var(--ddss-warningcontainer);
+}
+
+.border-color-onwarning {
+  border-color: var(--ddss-onwarning);
+}
+
+.border-color-onwarningcontainer {
+  border-color: var(--ddss-onwarningcontainer);
+}
+
+.border-color-info {
+  border-color: var(--ddss-info);
+}
+
+.border-color-infocontainer {
+  border-color: var(--ddss-infocontainer);
+}
+
+.border-color-oninfo {
+  border-color: var(--ddss-oninfo);
+}
+
+.border-color-oninfocontainer {
+  border-color: var(--ddss-oninfocontainer);
+}
+
+.border-color-primaryfixed {
+  border-color: var(--ddss-primaryfixed);
+}
+
+.border-color-primaryfixeddim {
+  border-color: var(--ddss-primaryfixeddim);
+}
+
+.border-color-onprimaryfixed {
+  border-color: var(--ddss-onprimaryfixed);
+}
+
+.border-color-onprimaryfixedvariant {
+  border-color: var(--ddss-onprimaryfixedvariant);
+}
+
+.border-color-secondaryfixed {
+  border-color: var(--ddss-secondaryfixed);
+}
+
+.border-color-secondaryfixeddim {
+  border-color: var(--ddss-secondaryfixeddim);
+}
+
+.border-color-onsecondaryfixed {
+  border-color: var(--ddss-onsecondaryfixed);
+}
+
+.border-color-onsecondaryfixedvariant {
+  border-color: var(--ddss-onsecondaryfixedvariant);
+}
+
+.border-color-tertiaryfixed {
+  border-color: var(--ddss-tertiaryfixed);
+}
+
+.border-color-tertiaryfixeddim {
+  border-color: var(--ddss-tertiaryfixeddim);
+}
+
+.border-color-ontertiaryfixed {
+  border-color: var(--ddss-ontertiaryfixed);
+}
+
+.border-color-ontertiaryfixedvariant {
+  border-color: var(--ddss-ontertiaryfixedvariant);
+}
+
+.border-color-surfacedim {
+  border-color: var(--ddss-surfacedim);
+}
+
+.border-color-surfacebright {
+  border-color: var(--ddss-surfacebright);
+}
+
+.border-color-surfacecontainerlowest {
+  border-color: var(--ddss-surfacecontainerlowest);
+}
+
+.border-color-surfacecontainerlow {
+  border-color: var(--ddss-surfacecontainerlow);
+}
+
+.border-color-surfacecontainer {
+  border-color: var(--ddss-surfacecontainer);
+}
+
+.border-color-surfacecontainerhigh {
+  border-color: var(--ddss-surfacecontainerhigh);
+}
+
+.border-color-surfacecontainerhighest {
+  border-color: var(--ddss-surfacecontainerhighest);
+}

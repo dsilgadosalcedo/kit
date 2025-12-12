@@ -1,0 +1,46 @@
+[data-ddss-component="state-layer"] {
+  z-index: 1;
+  opacity: 0;
+
+  pointer-events: none;
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+  transition: opacity 0.1s ease-out;
+}
+
+/* Only apply styles to the [data-ddss-component="state-layer"] when its direct parent is hovered, active, or focused */
+div:hover > [data-ddss-component="state-layer"],
+a:hover > [data-ddss-component="state-layer"],
+button:hover > [data-ddss-component="state-layer"],
+li:hover > [data-ddss-component="state-layer"] {
+  opacity: 0.16 !important;
+}
+
+div:active > [data-ddss-component="state-layer"],
+a:active > [data-ddss-component="state-layer"],
+button:active > [data-ddss-component="state-layer"],
+li:active > [data-ddss-component="state-layer"] {
+  opacity: 0.5 !important;
+}
+
+div:focus > [data-ddss-component="state-layer"],
+a:focus > [data-ddss-component="state-layer"],
+button:focus > [data-ddss-component="state-layer"],
+li:focus > [data-ddss-component="state-layer"] {
+  opacity: 0.35 !important;
+}
+
+.is-active [data-ddss-component="state-layer"] {
+  opacity: 0.16 !important;
+}
+
+.list-item.active [data-ddss-component="state-layer"] {
+  opacity: 0.24 !important;
+}
+
+[data-ddss-forced-state="active"] {
+  opacity: 0.12 !important;
+}

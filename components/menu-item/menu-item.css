@@ -1,0 +1,54 @@
+[data-ddss-component="menu-item"] {
+  --py: calc(var(--ddss-size-lg) * var(--ddss-halfstep-dec));
+  --gap: calc(var(--py) / var(--ddss-eighthstep));
+
+  display: inline-flex;
+  align-items: center;
+  gap: var(--ddss-size-sm);
+  border-radius: calc(var(--ddss-size-lg) * var(--ddss-halfstep-dec));
+  padding-top: var(--py);
+  padding-bottom: var(--py);
+  gap: var(--gap);
+  position: relative;
+
+  /* Required for text-overflow ellipsis */
+  overflow: hidden;
+  cursor: pointer;
+}
+
+[data-ddss-menu-item-element="content-wrap"] {
+  flex: 1 0 0;
+  overflow: hidden;
+  white-space: nowrap; 
+  text-overflow: ellipsis;
+}
+
+/* Left padding with start icon */
+[data-ddss-component="menu-item"]:has([data-ddss-icon-position="start"]) {
+  padding-left: calc(var(--ddss-size-lg) * var(--ddss-halfstep-dec));
+}
+
+/* Right padding with end icon */
+[data-ddss-component="menu-item"]:has([data-ddss-icon-position="end"]) {
+  padding-right: calc(var(--ddss-size-lg) * var(--ddss-halfstep-dec));
+}
+
+/* Default padding without icons */
+[data-ddss-component="menu-item"]:not(:has([data-ddss-icon-position="start"])) {
+  padding-left: var(--body-font-size);
+}
+
+[data-ddss-component="menu-item"]:not(:has([data-ddss-icon-position="end"])) {
+  padding-right: var(--body-font-size);
+}
+
+[data-ddss-component="menu-item"] > [data-ddss-component="state-layer"] {
+  border-radius: var(--ddss-size-xs);
+}
+
+
+/* Force-inherit font size when nested within ddss-component="dropdown-menu" */
+
+[data-ddss-component="dropdown-menu"] [data-ddss-component="menu-item"] {
+  font-size: inherit !important;
+}

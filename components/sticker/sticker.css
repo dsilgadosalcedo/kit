@@ -1,0 +1,9 @@
+[data-ddss-component="sticker"] {
+  display: inline-block;
+  padding: var(--ddss-size-xs) var(--ddss-size-sm);
+  color: var(--ddss-onprimary);
+  border-radius: var(--ddss-size-sm);
+  font-weight: 500;
+  line-height: var(--label-line-height);
+  font-size: var(--label-font-size);
+}

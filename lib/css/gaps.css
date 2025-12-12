@@ -1,0 +1,42 @@
+/* Gaps */
+@import "./liftkitvars.css";
+
+.gap-3xs {
+  gap: var(--ddss-size-3xs);
+} 
+
+.gap-2xs {
+  gap: var(--ddss-size-2xs);
+}
+
+.gap-xs {
+  gap: var(--ddss-size-xs);
+}
+
+.gap-sm {
+  gap: var(--ddss-size-sm);
+}
+
+.gap-md {
+  gap: var(--ddss-size-md);
+}
+
+.gap-lg {
+  gap: var(--ddss-size-lg);
+}
+
+.gap-xl {
+  gap: var(--ddss-size-xl);
+}
+
+.gap-2xl {
+  gap: var(--ddss-size-2xl);
+}
+
+.gap-3xl {
+  gap: var(--ddss-size-3xl);
+}
+
+.gap-4xl {
+  gap: var(--ddss-size-4xl);
+}

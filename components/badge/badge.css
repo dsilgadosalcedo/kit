@@ -1,0 +1,149 @@
+[data-ddss-component="badge"] {
+  display: inline-flex;
+  padding: var(--ddss-size-xs);
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: var(--ddss-size-sm);
+  background: var(--LiftKit-Default-sys-light-surface-container, #eeedf8);
+  font-size: var(--ddss-size-md);
+  position: relative;
+  overflow: hidden;
+
+  [data-ddss-slot="icon"] {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+/* Scale modifiers */
+[data-ddss-badge-scale="md"] {
+  font-size: var(--ddss-size-md);
+}
+
+[data-ddss-badge-scale="lg"] {
+  font-size: var(--ddss-size-lg);
+}
+
+/* Color modifiers */
+[data-ddss-badge-color="ddss-primary"] {
+  background-color: var(--ddss-primary);
+  color: var(--ddss-onprimary);
+}
+
+[data-ddss-badge-color="ddss-secondary"] {
+  background-color: var(--ddss-secondary);
+  color: var(--ddss-onsecondary);
+}
+
+[data-ddss-badge-color="ddss-tertiary"] {
+  background-color: var(--ddss-tertiary);
+  color: var(--ddss-ontertiary);
+}
+
+[data-ddss-badge-color="ddss-error"] {
+  background-color: var(--ddss-error);
+  color: var(--ddss-onerror);
+}
+
+[data-ddss-badge-color="ddss-warning"] {
+  background-color: var(--ddss-warning);
+  color: var(--ddss-onwarning);
+}
+
+[data-ddss-badge-color="ddss-success"] {
+  background-color: var(--ddss-success);
+  color: var(--ddss-onsuccess);
+}
+
+[data-ddss-badge-color="ddss-info"] {
+  background-color: var(--ddss-info);
+  color: var(--ddss-oninfo);
+}
+
+[data-ddss-badge-color="ddss-surface"] {
+  background-color: var(--ddss-surface);
+  color: var(--ddss-onsurface);
+}
+
+[data-ddss-badge-color="ddss-inverse"] {
+  background-color: var(--ddss-inverseprimary);
+  color: var(--ddss-inverseonsurface);
+}
+
+[data-ddss-badge-color="ddss-primarycontainer"] {
+  background-color: var(--ddss-primarycontainer);
+  color: var(--ddss-onprimarycontainer);
+}
+
+[data-ddss-badge-color="ddss-secondarycontainer"] {
+  background-color: var(--ddss-secondarycontainer);
+  color: var(--ddss-onsecondarycontainer);
+}
+
+[data-ddss-badge-color="ddss-tertiarycontainer"] {
+  background-color: var(--ddss-tertiarycontainer);
+  color: var(--ddss-ontertiarycontainer);
+}
+
+[data-ddss-badge-color="ddss-errorcontainer"] {
+  background-color: var(--ddss-errorcontainer);
+  color: var(--ddss-onerrorcontainer);
+}
+
+[data-ddss-badge-color="ddss-warningcontainer"] {
+  background-color: var(--ddss-warningcontainer);
+  color: var(--ddss-onwarningcontainer);
+}
+
+[data-ddss-badge-color="ddss-successcontainer"] {
+  background-color: var(--ddss-successcontainer);
+  color: var(--ddss-onsuccesscontainer);
+}
+
+[data-ddss-badge-color="ddss-infocontainer"] {
+  background-color: var(--ddss-infocontainer);
+  color: var(--ddss-oninfocontainer);
+}
+
+[data-ddss-badge-color="ddss-surfacecontainerlowest"] {
+  background-color: var(--ddss-surfacecontainerlowest);
+  color: var(--ddss-onbackground);
+}
+
+[data-ddss-badge-color="ddss-surfacecontainerlow"] {
+  background-color: var(--ddss-surfacecontainerlow);
+  color: var(--ddss-onbackground);
+}
+
+[data-ddss-badge-color="ddss-surfacecontainer"] {
+  background-color: var(--ddss-surfacecontainer);
+  color: var(--ddss-onbackground);
+}
+
+[data-ddss-badge-color="ddss-surfacecontainerhigh"] {
+  background-color: var(--ddss-surfacecontainerhigh);
+  color: var(--ddss-onbackground);
+}
+
+[data-ddss-badge-color="ddss-surfacecontainerhighest"] {
+  background-color: var(--ddss-surfacecontainerhighest);
+  color: var(--ddss-onbackground);
+}
+
+[data-ddss-badge-color="ddss-surfacevariant"] {
+  background-color: var(--ddss-surfacevariant);
+  color: var(--ddss-onsurfacevariant);
+}
+
+[data-ddss-badge-color="ddss-inversesurface"] {
+  background-color: var(--ddss-inversesurface);
+  color: var(--ddss-inverseonsurface);
+}
+
+[data-ddss-component="badge-scrim"] {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  opacity: 0.1;
+}

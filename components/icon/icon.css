@@ -1,0 +1,238 @@
+[data-ddss-component="icon"] {
+  width: calc(1em * var(--ddss-halfstep));
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Regular families */
+[data-ddss-icon-font-class="display1"] {
+  --lineHeightInEms: calc(1em * var(--ddss-quarterstep));
+  --md: var(--lineHeightInEms);
+
+  --sm: calc(var(--lineHeightInEms) * var(--ddss-wholestep-dec));
+  --xs: calc(var(--lineHeightInEms) * var(--ddss-halfstep-dec));
+  --2xs: calc(var(--lineHeightInEms) * var(--ddss-quarterstep-dec));
+
+  --sm: calc(var(--lineHeightInEms) * calc(1 / var(--ddss-halfstep)));
+  --lg: calc(var(--lineHeightInEms) * var(--ddss-wholestep));
+  --xl: calc(var(--ddss-size-lg) * var(--ddss-wholestep));
+  --2xl: calc(var(--ddss-size-xl) * var(--ddss-wholestep));
+
+  letter-spacing: -0.022em;
+  font-size: var(--display1-font-size);
+  font-weight: 400;
+  line-height: var(--ddss-quarterstep);
+}
+
+[data-ddss-icon-font-class="display2"] {
+  --lineHeightInEms: calc(1em * var(--ddss-halfstep));
+  --md: var(--lineHeightInEms);
+
+  --sm: calc(var(--lineHeightInEms) * var(--ddss-wholestep-dec));
+  --xs: calc(var(--lineHeightInEms) * var(--ddss-halfstep-dec));
+  --2xs: calc(var(--lineHeightInEms) * var(--ddss-quarterstep-dec));
+
+  --lg: calc(var(--lineHeightInEms) * var(--ddss-wholestep));
+  --xl: calc(var(--ddss-size-lg) * var(--ddss-wholestep));
+  --2xl: calc(var(--ddss-size-xl) * var(--ddss-wholestep));
+
+  letter-spacing: -0.022em;
+  font-size: var(--display2-font-size);
+  font-weight: 400;
+  line-height: var(--ddss-halfstep);
+}
+
+[data-ddss-icon-font-class="title1"] {
+  --lineHeightInEms: calc(1em * var(--ddss-halfstep));
+  --md: var(--lineHeightInEms);
+
+  --sm: calc(var(--lineHeightInEms) * var(--ddss-wholestep-dec));
+  --xs: calc(var(--lineHeightInEms) * var(--ddss-halfstep-dec));
+  --2xs: calc(var(--lineHeightInEms) * var(--ddss-quarterstep-dec));
+
+  --lg: calc(var(--lineHeightInEms) * var(--ddss-wholestep));
+  --xl: calc(var(--ddss-size-lg) * var(--ddss-wholestep));
+  --2xl: calc(var(--ddss-size-xl) * var(--ddss-wholestep));
+
+  letter-spacing: -0.022em;
+  font-size: var(--title1-font-size);
+  font-weight: 400;
+  line-height: var(--ddss-halfstep);
+}
+
+[data-ddss-icon-font-class="title2"] {
+  --lineHeightInEms: calc(1em * var(--ddss-halfstep));
+  --md: var(--lineHeightInEms);
+
+  --sm: calc(var(--lineHeightInEms) * var(--ddss-wholestep-dec));
+  --xs: calc(var(--lineHeightInEms) * var(--ddss-halfstep-dec));
+  --2xs: calc(var(--lineHeightInEms) * var(--ddss-quarterstep-dec));
+
+  --lg: calc(var(--lineHeightInEms) * var(--ddss-wholestep));
+  --xl: calc(var(--ddss-size-lg) * var(--ddss-wholestep));
+  --2xl: calc(var(--ddss-size-xl) * var(--ddss-wholestep));
+
+  letter-spacing: -0.02em;
+  font-size: var(--title2-font-size);
+  font-weight: 400;
+  line-height: var(--ddss-halfstep);
+}
+
+[data-ddss-icon-font-class="title3"] {
+  --lineHeightInEms: calc(1em * var(--ddss-halfstep));
+  --md: var(--lineHeightInEms);
+
+  --sm: calc(var(--lineHeightInEms) * var(--ddss-wholestep-dec));
+  --xs: calc(var(--lineHeightInEms) * var(--ddss-halfstep-dec));
+  --2xs: calc(var(--lineHeightInEms) * var(--ddss-quarterstep-dec));
+
+  --lg: calc(var(--lineHeightInEms) * var(--ddss-wholestep));
+  --xl: calc(var(--ddss-size-lg) * var(--ddss-wholestep));
+  --2xl: calc(var(--ddss-size-xl) * var(--ddss-wholestep));
+
+  letter-spacing: -0.017em;
+  font-size: var(--title3-font-size);
+  font-weight: 400;
+  line-height: var(--ddss-halfstep);
+}
+
+[data-ddss-icon-font-class="heading"] {
+  --lineHeightInEms: calc(1em * var(--ddss-halfstep));
+  --md: var(--lineHeightInEms);
+
+  --sm: calc(var(--lineHeightInEms) * var(--ddss-wholestep-dec));
+  --xs: calc(var(--lineHeightInEms) * var(--ddss-halfstep-dec));
+  --2xs: calc(var(--lineHeightInEms) * var(--ddss-quarterstep-dec));
+
+  --lg: calc(var(--lineHeightInEms) * var(--ddss-wholestep));
+  --xl: calc(var(--ddss-size-lg) * var(--ddss-wholestep));
+  --2xl: calc(var(--ddss-size-xl) * var(--ddss-wholestep));
+
+  letter-spacing: -0.014em;
+  font-size: var(--heading-font-size);
+  font-weight: 600;
+  line-height: var(--ddss-halfstep);
+}
+
+[data-ddss-icon-font-class="subheading"] {
+  --lineHeightInEms: calc(1em * var(--ddss-halfstep));
+  --md: var(--lineHeightInEms);
+
+  --sm: calc(var(--lineHeightInEms) * var(--ddss-wholestep-dec));
+  --xs: calc(var(--lineHeightInEms) * var(--ddss-halfstep-dec));
+  --2xs: calc(var(--lineHeightInEms) * var(--ddss-quarterstep-dec));
+
+  --lg: calc(var(--lineHeightInEms) * var(--ddss-wholestep));
+  --xl: calc(var(--ddss-size-lg) * var(--ddss-wholestep));
+  --2xl: calc(var(--ddss-size-xl) * var(--ddss-wholestep));
+
+  letter-spacing: -0.007em;
+  font-size: var(--subheading-font-size);
+  font-weight: 400;
+  line-height: var(--ddss-halfstep);
+}
+
+[data-ddss-icon-font-class="body"] {
+  --lineHeightInEms: var(--title2-font-size);
+  --md: 1em;
+  --sm: calc(var(--lineHeightInEms) * var(--ddss-wholestep-dec));
+  --xs: calc(var(--lineHeightInEms) * var(--ddss-halfstep-dec));
+  --2xs: calc(var(--lineHeightInEms) * var(--ddss-quarterstep-dec));
+
+  --lg: calc(1em * var(--ddss-wholestep));
+  --xl: calc(var(--ddss-size-lg) * var(--ddss-wholestep));
+  --2xl: calc(var(--ddss-size-xl) * var(--ddss-wholestep));
+
+  letter-spacing: -0.011em;
+  cursor: default;
+  font-size: 1em;
+  font-weight: 400;
+  line-height: var(--ddss-wholestep);
+}
+
+[data-ddss-icon-font-class="callout"] {
+  --lineHeightInEms: calc(1em * var(--ddss-halfstep));
+  --md: var(--lineHeightInEms);
+
+  --sm: calc(var(--lineHeightInEms) * var(--ddss-wholestep-dec));
+  --xs: calc(var(--lineHeightInEms) * var(--ddss-halfstep-dec));
+  --2xs: calc(var(--lineHeightInEms) * var(--ddss-quarterstep-dec));
+
+  --lg: calc(var(--lineHeightInEms) * var(--ddss-wholestep));
+  --xl: calc(var(--ddss-size-lg) * var(--ddss-wholestep));
+  --2xl: calc(var(--ddss-size-xl) * var(--ddss-wholestep));
+
+  letter-spacing: -0.009em;
+  font-size: var(--callout-font-size);
+  font-weight: 400;
+  line-height: var(--ddss-halfstep);
+}
+
+[data-ddss-icon-font-class="label"] {
+  --lineHeightInEms: calc(1em * var(--ddss-halfstep));
+  --md: var(--lineHeightInEms);
+
+  --sm: calc(var(--lineHeightInEms) * var(--ddss-wholestep-dec));
+  --xs: calc(var(--lineHeightInEms) * var(--ddss-halfstep-dec));
+  --2xs: calc(var(--lineHeightInEms) * var(--ddss-quarterstep-dec));
+
+  --lg: calc(var(--lineHeightInEms) * var(--ddss-wholestep));
+  --xl: calc(var(--ddss-size-lg) * var(--ddss-wholestep));
+  --2xl: calc(var(--ddss-size-xl) * var(--ddss-wholestep));
+
+  letter-spacing: -0.004em;
+  font-size: var(--label-font-size);
+  font-weight: 600;
+  line-height: var(--ddss-halfstep);
+  position: static;
+}
+
+[data-ddss-icon-font-class="caption"] {
+  --lineHeightInEms: calc(1em * var(--ddss-halfstep));
+  --md: var(--lineHeightInEms);
+
+  --sm: calc(var(--lineHeightInEms) * var(--ddss-wholestep-dec));
+  --xs: calc(var(--lineHeightInEms) * var(--ddss-halfstep-dec));
+  --2xs: calc(var(--lineHeightInEms) * var(--ddss-quarterstep-dec));
+
+  --lg: calc(var(--lineHeightInEms) * var(--ddss-wholestep));
+  --xl: calc(var(--ddss-size-lg) * var(--ddss-wholestep));
+  --2xl: calc(var(--ddss-size-xl) * var(--ddss-wholestep));
+
+  letter-spacing: -0.007em;
+  font-size: var(--caption-font-size);
+  font-weight: 400;
+  line-height: var(--ddss-halfstep);
+}
+
+[data-ddss-icon-font-class="capline"] {
+  --lineHeightInEms: calc(1em * var(--ddss-halfstep));
+  --md: var(--lineHeightInEms);
+
+  --sm: calc(var(--lineHeightInEms) * var(--ddss-wholestep-dec));
+  --xs: calc(var(--lineHeightInEms) * var(--ddss-halfstep-dec));
+  --2xs: calc(var(--lineHeightInEms) * var(--ddss-quarterstep-dec));
+
+  --lg: calc(var(--lineHeightInEms) * var(--ddss-wholestep));
+  --xl: calc(var(--ddss-size-lg) * var(--ddss-wholestep));
+  --2xl: calc(var(--ddss-size-xl) * var(--ddss-wholestep));
+
+  letter-spacing: 0.0618em;
+  text-transform: uppercase;
+  font-size: var(--capline-font-size);
+  font-weight: 400;
+  line-height: var(--ddss-halfstep);
+}
+
+/* Ignore the width and aspect ratio rules when inside an icon-button component */
+
+[data-ddss-component="icon-button"] [data-ddss-component="icon"] {
+  width: unset;
+  aspect-ratio: unset;
+}
+
+[data-ddss-icon-offset="true"] {
+  margin-top: calc(-1 * calc(1em * var(--ddss-quarterstep-dec)));
+}

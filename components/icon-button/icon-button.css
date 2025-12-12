@@ -1,0 +1,187 @@
+[data-ddss-component="icon-button"] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-radius: 100em;
+  /* border: 1px solid transparent; */
+  padding: var(--ddss-size-xs);
+  font-weight: 500;
+  background: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+[data-ddss-component="icon-button"]>[data-ddss-button-content-wrap] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+
+/* [data-ddss-component="icon-button"]>[data-ddss-component="state-layer"] {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-color: var(--ddss-primary);
+  opacity: 0;
+  transition:
+    background-color 0.2s ease-out,
+    opacity 0.2s ease-out;
+} */
+
+/* STATE LAYER OPACITY
+[data-ddss-component="icon-button"]:hover>[data-ddss-component="state-layer"] {
+  opacity: 0.04;
+}
+
+[data-ddss-component="icon-button"]:active>[data-ddss-component="state-layer"],
+[data-ddss-component="icon-button"]:focus-visible>[data-ddss-component="state-layer"] {
+  opacity: 0.1;
+} */
+
+/* Size map
+[data-ddss-icon-button-size="xs"] {
+  font-size: var(--caption-font-size);
+}
+
+[data-ddss-icon-button-size="sm"] {
+  font-size: var(--caption-line-height);
+}
+
+[data-ddss-icon-button-size="md"] {
+  font-size: var(--heading-font-size);
+}
+
+[data-ddss-icon-button-size="lg"] {
+  font-size: var(--title3-font-size);
+}
+
+[data-ddss-icon-button-size="xl"] {
+  font-size: var(--title2-font-size);
+} */
+
+/* COLORS */
+[data-ddss-icon-button-color="primary"] {
+  background-color: var(--ddss-primary);
+  color: var(--ddss-onprimary);
+}
+
+[data-ddss-icon-button-color="primarycontainer"] {
+  background-color: var(--ddss-primarycontainer);
+  color: var(--ddss-onprimarycontainer);
+}
+
+[data-ddss-icon-button-color="secondary"] {
+  background-color: var(--ddss-secondary);
+  color: var(--ddss-onsecondary);
+}
+
+[data-ddss-icon-button-color="secondarycontainer"] {
+  background-color: var(--ddss-secondarycontainer);
+  color: var(--ddss-onsecondarycontainer);
+}
+
+[data-ddss-icon-button-color="tertiary"] {
+  background-color: var(--ddss-tertiary);
+  color: var(--ddss-ontertiary);
+}
+
+[data-ddss-icon-button-color="tertiarycontainer"] {
+  background-color: var(--ddss-tertiarycontainer);
+  color: var(--ddss-ontertiarycontainer);
+}
+
+[data-ddss-icon-button-color="error"] {
+  background-color: var(--ddss-error);
+  color: var(--ddss-onerror);
+}
+
+[data-ddss-icon-button-color="errorcontainer"] {
+  background-color: var(--ddss-errorcontainer);
+  color: var(--ddss-onerrorcontainer);
+}
+
+[data-ddss-icon-button-color="success"] {
+  background-color: var(--ddss-success);
+  color: var(--ddss-onsuccess);
+}
+
+[data-ddss-icon-button-color="successcontainer"] {
+  background-color: var(--ddss-successcontainer);
+  color: var(--ddss-onsuccesscontainer);
+}
+
+[data-ddss-icon-button-color="warning"] {
+  background-color: var(--ddss-warning);
+  color: var(--ddss-onwarning);
+}
+
+[data-ddss-icon-button-color="warningcontainer"] {
+  background-color: var(--ddss-warningcontainer);
+  color: var(--ddss-onwarningcontainer);
+}
+
+[data-ddss-icon-button-color="info"] {
+  background-color: var(--ddss-info);
+  color: var(--ddss-oninfo);
+}
+
+[data-ddss-icon-button-color="infocontainer"] {
+  background-color: var(--ddss-infocontainer);
+  color: var(--ddss-oninfocontainer);
+}
+
+[data-ddss-icon-button-color="surface"] {
+  background-color: var(--ddss-surface);
+  color: var(--ddss-onsurface);
+}
+
+[data-ddss-icon-button-color="surfacecontainer"] {
+  background-color: var(--ddss-surfacecontainer);
+  color: var(--ddss-onsurfacecontainer);
+}
+
+[data-ddss-icon-button-color="surfacevariant"] {
+  background-color: var(--ddss-surfacevariant);
+  color: var(--ddss-onsurfacevariant);
+}
+
+[data-ddss-icon-button-color="surfacecontainerlowest"] {
+  background-color: var(--ddss-surfacecontainerlowest);
+  color: var(--ddss-onsurfacecontainerlowest);
+}
+
+[data-ddss-icon-button-color="surfacecontainerlow"] {
+  background-color: var(--ddss-surfacecontainerlow);
+  color: var(--ddss-onsurfacecontainerlow);
+}
+
+[data-ddss-icon-button-color="surfacecontainerhigh"] {
+  background-color: var(--ddss-surfacecontainerhigh);
+  color: var(--ddss-onsurfacecontainerhigh);
+}
+
+[data-ddss-icon-button-color="surfacecontainerhighest"] {
+  background-color: var(--ddss-surfacecontainerhighest);
+  color: var(--ddss-onsurfacecontainerhighest);
+}
+
+[data-ddss-icon-button-color="inversesurface"] {
+  background-color: var(--ddss-inversesurface);
+  color: var(--ddss-oninversesurface);
+}
+
+/* VARIANT OUTLINE */
+[data-ddss-icon-button-variant="outline"] {
+  border: solid 1px var(--ddss-outlinevariant);
+  background-color: transparent;
+}
+
+/* VARIANT TEXT */
+[data-ddss-icon-button-variant="text"] {
+  background-color: transparent;
+}

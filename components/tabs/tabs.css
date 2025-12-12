@@ -1,0 +1,24 @@
+[data-ddss-component="tabs"] {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+
+  &[data-ddss-tabs-content-scrollable="true"] {
+    overflow: hidden;
+    flex-grow: 1;
+  }
+
+}
+
+[data-ddss-tabs-el="tab-content"] > * {
+  width: 100%;
+}
+
+[data-ddss-tabs-el="tab-content"][data-ddss-tabs-content-scrollable="true"] {
+  overflow: auto;
+  flex-grow: 1;
+  scrollbar-color: var(--ddss-outline) transparent;
+  scrollbar-width: thin;
+}
+

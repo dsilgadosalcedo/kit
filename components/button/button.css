@@ -1,0 +1,83 @@
+[data-ddss-component="button"] {
+  /* DEFAULTS */
+  --button-font-size: var(--body-font-size);
+  --button-line-height: var(--ddss-halfstep) !important;
+  --button-padX: var(--button-font-size);
+  --button-padY: calc(var(--button-font-size) * calc(var(--ddss-halfstep) / var(--ddss-size-xl-unitless)));
+  --button-padX-sideWithIcon: calc(var(--button-font-size) / var(--ddss-wholestep));
+  --button-gap: calc(var(--button-padY) / var(--ddss-eighthstep));
+  cursor: pointer;
+
+  display: inline-flex;
+  vertical-align: middle;
+  border: 1px solid rgba(0, 0, 0, 0);
+  border-radius: 100em;
+  position: relative;
+  text-decoration: none;
+  white-space: pre;
+  word-break: keep-all;
+  overflow: hidden;
+  padding: var(--button-padY) 1em;
+  font-weight: 500;
+  font-size: var(--button-font-size);
+  line-height: var(--button-line-height);
+  font-family: inherit;
+}
+
+/* SIZE VARIANTS */
+[data-ddss-button-size="sm"] {
+  --button-font-size: var(--subheading-font-size);
+}
+
+[data-ddss-button-size="lg"] {
+  --button-font-size: var(--title3-font-size);
+}
+
+/* ICON-BASED PADDING ADJUSTMENTS */
+[data-ddss-component="button"]:has([data-ddss-icon-position="start"]) {
+  padding-left: var(--button-padX-sideWithIcon);
+  padding-right: var(--button-padX);
+}
+
+[data-ddss-component="button"]:has([data-ddss-icon-position="end"]) {
+  padding-left: 1em;
+  padding-right: var(--button-padX-sideWithIcon);
+}
+
+[data-ddss-component="button"]:has([data-ddss-icon-position="start"]):has([data-ddss-icon-position="end"]) {
+  padding-left: var(--button-padX-sideWithIcon);
+  padding-right: var(--button-padX-sideWithIcon);
+}
+
+/* CONTENT WRAPPER */
+[data-ddss-button-content-wrap="true"] {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--button-gap);
+}
+
+/* TODO: Remove entirely */
+
+/* [data-ddss-component="button"] div:has(> [data-ddss-component="icon"]) {
+  width: calc(1em * var(--ddss-halfstep));
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+
+/* ICON VERTICAL OPTICAL ALIGNMENTS */
+
+[data-ddss-button-optic-icon-shift="true"] div:has(> [data-ddss-component="icon"]) {
+  margin-top: calc(-1 * calc(1em * var(--ddss-quarterstep-dec)));
+}
+
+/* STYLE VARIANTS */
+
+[data-ddss-button-variant="text"] {
+  background: transparent !important;
+}
+[data-ddss-button-variant="outline"] {
+  background: transparent !important;
+  border: 1px solid var(--ddss-outlinevariant);
+}

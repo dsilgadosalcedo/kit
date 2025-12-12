@@ -1,0 +1,158 @@
+'use client';
+
+// CustomDropdown.tsx
+import Card, { DdssCardProps } from "@/components/card";
+import React, { useContext, useState, useRef, useEffect, createContext } from "react";
+import Column from "@/components/column";
+import ReactDOM from "react-dom";
+import "@/components/dropdown/dropdown.css";
+
+interface DdssDropdownContext {
+  open: boolean;
+  setOpen: (open: boolean) => void;
+  triggerRef: React.RefObject<HTMLElement | null>;
+  contentRef: React.RefObject<HTMLDivElement | null>;
+}
+
+export interface DdssDropdownTriggerProps {
+  children: React.ReactElement;
+}
+
+export interface DdssDropdownMenuProps {
+  children: React.ReactNode;
+  cardProps?: DdssCardProps; // Optional props to pass to the child Card component.
+}
+
+// Context for dropdown state
+const DropdownContext = createContext<DdssDropdownContext>({} as DdssDropdownContext);
+
+export function Dropdown({ children }: { children: React.ReactNode }) {
+  const [open, setOpen] = useState(false);
+  const triggerRef = useRef(null);
+  const contentRef = useRef(null);
+
+  // Global singleton registry
+  useEffect(() => {
+    if (!open) return;
+    const self = { close: () => setOpen(false) };
+    DropdownRegistry.register(self);
+    return () => DropdownRegistry.unregister(self);
+  }, [open]);
+
+  return (
+    <DropdownContext.Provider value={{ open, setOpen, triggerRef, contentRef }}>{children}</DropdownContext.Provider>
+  );
+}
+
+export function DropdownTrigger({ children }: DdssDropdownTriggerProps) {
+  const { open, setOpen, triggerRef } = useContext(DropdownContext);
+  return React.cloneElement(children, {
+    ref: triggerRef,
+    onClick: () => setOpen(!open),
+    "aria-expanded": open,
+    "aria-haspopup": "menu",
+  } as React.HTMLAttributes<HTMLElement>);
+}
+
+export function DropdownMenu({ children, cardProps }: DdssDropdownMenuProps) {
+  const { open, setOpen, triggerRef, contentRef } = useContext(DropdownContext);
+
+  useEffect(() => {
+    function handleClickOutside(e: MouseEvent) {
+      if (
+        contentRef.current &&
+        !contentRef.current.contains(e.target as Node) &&
+        triggerRef.current &&
+        !triggerRef.current.contains(e.target as Node)
+      ) {
+        setOpen(false);
+      }
+    }
+    if (open) document.addEventListener("mousedown", handleClickOutside);
+
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, [open, contentRef, setOpen, triggerRef]);
+
+  if (!open || !triggerRef.current) return null;
+
+  const rect = triggerRef.current.getBoundingClientRect();
+
+  /**Calculate transform origin based on triggerRef viewport quadrant */
+
+  function getQuadrant() {
+    const windowWidth = window.innerWidth;
+    const windowHeight = window.innerHeight;
+
+    /** Origin as in "the corner of the trigger the menu will expand from" */
+    let triggerQuadrant: "top-left" | "top-right" | "bottom-right" | "bottom-left";
+
+    const isTop: boolean = rect.top < windowHeight / 2;
+    const isLeft: boolean = rect.left < windowWidth / 2;
+
+    if (isTop) {
+      triggerQuadrant = isLeft ? "bottom-left" : "bottom-right";
+    } else {
+      triggerQuadrant = isLeft ? "top-left" : "top-right";
+    }
+
+    let positionStyle: React.CSSProperties = {};
+
+    switch (triggerQuadrant) {
+      case "top-left":
+        positionStyle = {
+          top: rect.top + window.scrollY,
+          left: rect.left + window.scrollX,
+        };
+        break;
+      case "top-right":
+        positionStyle = { top: rect.top + window.scrollY, left: rect.right + window.scrollX };
+        break;
+      case "bottom-right":
+        positionStyle = { top: rect.bottom + window.scrollY, left: rect.right + window.scrollX };
+        break;
+      case "bottom-left":
+        positionStyle = { top: rect.bottom + window.scrollY, left: rect.left + window.scrollX };
+        break;
+    }
+
+    return { triggerQuadrant, positionStyle };
+  }
+
+  const quadrantData = getQuadrant();
+
+  return ReactDOM.createPortal(
+    <div
+      ref={contentRef}
+      style={quadrantData.positionStyle}
+      role="menu"
+      data-ddss-component="dropdown-menu"
+      data-isactive={open}
+      data-ddss-dropdown-trigger-quadrant={quadrantData.triggerQuadrant}
+    >
+      <Card {...cardProps} className="shadow-xl">
+        <Column gap="none" className={cardProps?.scaleFactor}>
+          {children}
+        </Column>
+      </Card>
+    </div>,
+    document.body
+  );
+}
+
+// Singleton registry to track open dropdowns
+const DropdownRegistry = (() => {
+  interface DropdownInstance {
+    close: () => void;
+  }
+
+  let current: DropdownInstance | null = null;
+  return {
+    register(instance: DropdownInstance) {
+      if (current && current !== instance) current.close();
+      current = instance;
+    },
+    unregister(instance: DropdownInstance) {
+      if (current === instance) current = null;
+    },
+  };
+})();

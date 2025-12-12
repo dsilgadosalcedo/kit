@@ -1,0 +1,117 @@
+[data-ddss-component="row"] {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 0;
+}
+
+/* Align Items */
+[data-ddss-row-align-items="start"] {
+  align-items: flex-start;
+}
+
+[data-ddss-row-align-items="center"] {
+  align-items: center;
+}
+
+[data-ddss-row-align-items="end"] {
+  align-items: flex-end;
+}
+
+[data-ddss-row-align-items="stretch"] {
+  align-items: stretch;
+}
+
+/* Justify Content */
+[data-ddss-row-justify-content="start"] {
+  justify-content: flex-start;
+}
+
+[data-ddss-row-justify-content="center"] {
+  justify-content: center;
+}
+
+[data-ddss-row-justify-content="end"] {
+  justify-content: flex-end;
+}
+
+[data-ddss-row-justify-content="space-between"] {
+  justify-content: space-between;
+}
+
+[data-ddss-row-justify-content="space-around"] {
+  justify-content: space-around;
+}
+
+/* Gap */
+[data-ddss-row-gap="3xs"] {
+  gap: var(--ddss-size-3xs);
+}
+
+[data-ddss-row-gap="2xs"] {
+  gap: var(--ddss-size-2xs);
+}
+
+[data-ddss-row-gap="xs"] {
+  gap: var(--ddss-size-xs);
+}
+
+[data-ddss-row-gap="sm"] {
+  gap: var(--ddss-size-sm);
+}
+
+[data-ddss-row-gap="md"] {
+  gap: var(--ddss-size-md);
+}
+
+[data-ddss-row-gap="lg"] {
+  gap: var(--ddss-size-lg);
+}
+
+[data-ddss-row-gap="xl"] {
+  gap: var(--ddss-size-xl);
+}
+
+[data-ddss-row-gap="2xl"] {
+  gap: var(--ddss-size-2xl);
+}
+
+[data-ddss-row-gap="3xl"] {
+  gap: var(--ddss-size-3xl);
+}
+
+[data-ddss-row-gap="4xl"] {
+  gap: var(--ddss-size-4xl);
+}
+
+/* Wrap */
+[data-ddss-row-wrap-children="true"] {
+  flex-wrap: wrap;
+}
+
+[data-ddss-row-wrap-children="false"] {
+  flex-wrap: nowrap;
+}
+
+/* Default Child Behavior */
+[data-ddss-row-default-child-behavior="auto-grow"]>* {
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: auto;
+}
+
+[data-ddss-row-default-child-behavior="auto-shrink"]>* {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+}
+
+[data-ddss-row-default-child-behavior="ignoreFlexRules"]>* {
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: auto;
+}
+
+[data-ddss-row-default-child-behavior="ignoreIntrinsicSize"]>* {
+  flex-basis: 0;
+}

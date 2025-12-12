@@ -1,0 +1,41 @@
+@import "./liftkitvars.css";
+
+.border-width-3xs {
+  border-width: var(--ddss-size-3xs);
+}
+
+.border-width-2xs {
+  border-width: var(--ddss-size-2xs);
+}
+
+.border-width-xs {
+  border-width: var(--ddss-size-xs);
+}
+
+.border-width-sm {
+  border-width: var(--ddss-size-sm);
+}
+
+.border-width-md {
+  border-width: var(--ddss-size-md);
+}
+
+.border-width-lg {
+  border-width: var(--ddss-size-lg);
+}
+
+.border-width-xl {
+  border-width: var(--ddss-size-xl);
+}
+
+.border-width-2xl {
+  border-width: var(--ddss-size-2xl);
+}
+
+.border-width-3xl {
+  border-width: var(--ddss-size-3xl);
+}
+
+.border-width-4xl {
+  border-width: var(--ddss-size-4xl);
+}

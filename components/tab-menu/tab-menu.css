@@ -1,0 +1,12 @@
+[data-ddss-component="tab-menu"] {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: 100%;
+  overflow-x: auto;
+  padding: 0;
+  position: relative;
+  border-bottom: 1px solid var(--ddss-outlinevariant);
+  flex: 0 0 auto;
+}

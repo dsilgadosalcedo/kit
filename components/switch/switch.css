@@ -1,0 +1,31 @@
+[data-ddss-component="switch"] {
+  position: relative;
+  display: block;
+  align-items: center;
+  justify-content: start;
+  width: var(--ddss-size-xl);
+  height: calc(var(--ddss-size-md) + calc(var(--ddss-size-2xs) * 2));
+  background-color: var(--ddss-surfacevariant);
+  border-radius: 100em;
+
+  [data-ddss-component="switch-thumb"] {
+    position: absolute;
+    top: 50%;
+    left: var(--ddss-size-2xs);
+    right: auto;
+    width: var(--ddss-size-md);
+    height: var(--ddss-size-md);
+    border-radius: 50%;
+    background-color: var(--ddss-onsurface);
+    transform: translateY(-50%);
+    transition: left 0.1s ease-out;
+  }
+}
+
+[data-ddss-component="switch"][data-ddss-switch-state="on"] {
+  background-color: var(--ddss-tertiary);
+}
+
+[data-ddss-switch-state="on"] [data-ddss-component="switch-thumb"] {
+  left: calc(100% - calc(var(--ddss-size-md) + var(--ddss-size-2xs)));
+}

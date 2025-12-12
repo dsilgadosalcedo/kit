@@ -1,0 +1,378 @@
+:root {
+  font-size: 16px;
+
+  --ddss-scalefactor: 1.618;
+  --ddss-wholestep: 1.618;
+  --ddss-halfstep: 1.272;
+  --ddss-quarterstep: 1.128;
+  --ddss-eighthstep: 1.062;
+
+  --ddss-wholestep-dec: 0.618;
+  --ddss-halfstep-dec: 0.272;
+  --ddss-quarterstep-dec: 0.128;
+  --ddss-eighthstep-dec: 0.062;
+
+  --ddss-size-md: 1em;
+  /* It's okay to use em here because the root font size
+                  has been manually set to 1rem */
+
+  --ddss-size-sm: calc(1em / var(--ddss-scalefactor));
+  --ddss-size-xs: calc(var(--ddss-size-sm) / var(--ddss-scalefactor));
+  --ddss-size-2xs: calc(var(--ddss-size-xs) / var(--ddss-scalefactor));
+  --ddss-size-3xs: calc(var(--ddss-size-2xs) / var(--ddss-scalefactor));
+  --ddss-size-lg: calc(1em * var(--ddss-scalefactor));
+  --ddss-size-xl: calc(var(--ddss-size-lg) * var(--ddss-scalefactor));
+  --ddss-size-2xl: calc(var(--ddss-size-xl) * var(--ddss-scalefactor));
+  --ddss-size-3xl: calc(var(--ddss-size-2xl) * var(--ddss-scalefactor));
+  --ddss-size-4xl: calc(var(--ddss-size-3xl) * var(--ddss-scalefactor));
+
+  /* Unitless sizes; required for adhoc calculations (division and multiplication in calc() require unitless numbers */
+  /* NOTE: in calc() with multiplication or division the right side must be a unitless number */
+
+  --ddss-size-sm-unitless: calc(1 / var(--ddss-scalefactor));
+  --ddss-size-xs-unitless: calc(var(--ddss-size-sm-unitless) / var(--ddss-scalefactor));
+  --ddss-size-2xs-unitless: calc(var(--ddss-size-xs-unitless) / var(--ddss-scalefactor));
+  --ddss-size-lg-unitless: calc(1 * var(--ddss-scalefactor));
+  --ddss-size-xl-unitless: calc(var(--ddss-size-lg-unitless) * var(--ddss-scalefactor));
+  --ddss-size-2xl-unitless: calc(var(--ddss-size-xl-unitless) * var(--ddss-scalefactor));
+
+  /*Increments*/
+
+  /* Colors */
+
+  --light__primary_ddssv: #0051e0;
+  --light__onprimary_ddssv: #faf8ff;
+  --light__primarycontainer_ddssv: #dbe1ff;
+  --light__onprimarycontainer_ddssv: #00174d;
+  --light__secondary_ddssv: #40617f;
+  --light__onsecondary_ddssv: #f7f9ff;
+  --light__secondarycontainer_ddssv: #cde5ff;
+  --light__onsecondarycontainer_ddssv: #001d32;
+  --light__tertiary_ddssv: #006878;
+  --light__ontertiary_ddssv: #f0fbff;
+  --light__tertiarycontainer_ddssv: #a8edff;
+  --light__ontertiarycontainer_ddssv: #001f25;
+  --light__error_ddssv: #bb0e45;
+  --light__onerror_ddssv: #fff8f7;
+  --light__errorcontainer_ddssv: #ffd9dc;
+  --light__onerrorcontainer_ddssv: #400012;
+  --light__background_ddssv: #fefbff;
+  --light__onbackground_ddssv: #171b27;
+  --light__surface_ddssv: #faf8ff;
+  --light__onsurface_ddssv: #171b27;
+  --light__surfacevariant_ddssv: #c8c6c6;
+  --light__onsurfacevariant_ddssv: #464747;
+  --light__outline_ddssv: #777777;
+  --light__outlinevariant_ddssv: #c8c6c6;
+  --light__shadow_ddssv: #000000;
+  --light__scrim_ddssv: #000000;
+  --light__inversesurface_ddssv: #2c303c;
+  --light__inverseonsurface_ddssv: #eef0ff;
+  --light__inverseprimary_ddssv: #b5c4ff;
+  --light__surfacedim_ddssv: #d7d9ea;
+  --light__surfacebright_ddssv: #faf8ff;
+  --light__surfacecontainerlowest_ddssv: white;
+  --light__surfacecontainerlow_ddssv: #f2f3ff;
+  --light__surfacecontainer_ddssv: #ebedfe;
+  --light__surfacecontainerhigh_ddssv: #e5e7f8;
+  --light__surfacecontainerhighest_ddssv: #dfe2f2;
+  --light__warning_ddssv: #7d5800;
+  --light__onwarning_ddssv: #fff8f3;
+  --light__warningcontainer_ddssv: #ffdea9;
+  --light__onwarningcontainer_ddssv: #271900;
+  --light__success_ddssv: #006b55;
+  --light__onsuccess_ddssv: #e6fff4;
+  --light__successcontainer_ddssv: #20ffce;
+  --light__onsuccesscontainer_ddssv: #002118;
+  --light__info_ddssv: #004ee7;
+  --light__oninfo_ddssv: #faf8ff;
+  --light__infocontainer_ddssv: #dce1ff;
+  --light__oninfocontainer_ddssv: #001550;
+  --dark__primary_ddssv: #b5c4ff;
+  --dark__onprimary_ddssv: #00297a;
+  --dark__primarycontainer_ddssv: #003cac;
+  --dark__onprimarycontainer_ddssv: #dbe1ff;
+  --dark__secondary_ddssv: #a8caec;
+  --dark__onsecondary_ddssv: #0b334f;
+  --dark__secondarycontainer_ddssv: #274a66;
+  --dark__onsecondarycontainer_ddssv: #cde5ff;
+  --dark__tertiary_ddssv: #00d9fa;
+  --dark__ontertiary_ddssv: #00363f;
+  --dark__tertiarycontainer_ddssv: #004e5b;
+  --dark__ontertiarycontainer_ddssv: #a8edff;
+  --dark__error_ddssv: #ffb2bb;
+  --dark__onerror_ddssv: #670021;
+  --dark__errorcontainer_ddssv: #910032;
+  --dark__onerrorcontainer_ddssv: #ffd9dc;
+  --dark__background_ddssv: #171b27;
+  --dark__onbackground_ddssv: #d1d4e4;
+  --dark__surface_ddssv: #222531;
+  --dark__onsurface_ddssv: #c3c6d6;
+  --dark__surfacevariant_ddssv: #303030;
+  --dark__onsurfacevariant_ddssv: #acabab;
+  --dark__outline_ddssv: #464747;
+  --dark__outlinevariant_ddssv: #303030;
+  --dark__shadow_ddssv: #000000;
+  --dark__scrim_ddssv: #000000;
+  --dark__inversesurface_ddssv: #faf8ff;
+  --dark__inverseonsurface_ddssv: #171b27;
+  --dark__inverseprimary_ddssv: #b5c4ff;
+  --dark__surfacedim_ddssv: #20232f;
+  --dark__surfacebright_ddssv: #434653;
+  --dark__surfacecontainerlowest_ddssv: #1b1f2b;
+  --dark__surfacecontainerlow_ddssv: #262a36;
+  --dark__surfacecontainer_ddssv: #2c303c;
+  --dark__surfacecontainerhigh_ddssv: #353945;
+  --dark__surfacecontainerhighest_ddssv: #3e424f;
+  --dark__warning_ddssv: #ffba28;
+  --dark__onwarning_ddssv: #422c00;
+  --dark__warningcontainer_ddssv: #5e4100;
+  --dark__onwarningcontainer_ddssv: #ffdea9;
+  --dark__success_ddssv: #00e0b4;
+  --dark__onsuccess_ddssv: #00382b;
+  --dark__successcontainer_ddssv: #00513f;
+  --dark__onsuccesscontainer_ddssv: #20ffce;
+  --dark__info_ddssv: #b6c4ff;
+  --dark__oninfo_ddssv: #00277f;
+  --dark__infocontainer_ddssv: #003ab1;
+  --dark__oninfocontainer_ddssv: #dce1ff;
+  --light__primaryfixed_ddssv: #dbe1ff;
+  --light__primaryfixeddim_ddssv: #b5c4ff;
+  --light__onprimaryfixed_ddssv: #00174d;
+  --light__onprimaryfixedvariant_ddssv: #003cac;
+  --light__secondaryfixed_ddssv: #cde5ff;
+  --light__secondaryfixeddim_ddssv: #a8caec;
+  --light__onsecondaryfixed_ddssv: #001d32;
+  --light__onsecondaryfixedvariant_ddssv: #274a66;
+  --light__tertiaryfixed_ddssv: #a8edff;
+  --light__tertiaryfixeddim_ddssv: #00d9fa;
+  --light__ontertiaryfixed_ddssv: #001f25;
+  --light__ontertiaryfixedvariant_ddssv: #004e5b;
+  --dark__primaryfixed_ddssv: #dbe1ff;
+  --dark__primaryfixeddim_ddssv: #b5c4ff;
+  --dark__onprimaryfixed_ddssv: #00174d;
+  --dark__onprimaryfixedvariant_ddssv: #003cac;
+  --dark__secondaryfixed_ddssv: #cde5ff;
+  --dark__secondaryfixeddim_ddssv: #a8caec;
+  --dark__onsecondaryfixed_ddssv: #001d32;
+  --dark__onsecondaryfixedvariant_ddssv: #274a66;
+  --dark__tertiaryfixed_ddssv: #a8edff;
+  --dark__tertiaryfixeddim_ddssv: #00d9fa;
+  --dark__ontertiaryfixed_ddssv: #001f25;
+  --dark__ontertiaryfixedvariant_ddssv: #004e5b;
+
+  --ddss-onprimary: var(--light__onprimary_ddssv);
+  --ddss-primarycontainer: var(--light__primarycontainer_ddssv);
+  --ddss-onprimarycontainer: var(--light__onprimarycontainer_ddssv);
+  --ddss-secondary: var(--light__secondary_ddssv);
+  --ddss-onsecondary: var(--light__onsecondary_ddssv);
+  --ddss-secondarycontainer: var(--light__secondarycontainer_ddssv);
+  --ddss-onsecondarycontainer: var(--light__onsecondarycontainer_ddssv);
+  --ddss-tertiary: var(--light__tertiary_ddssv);
+  --ddss-ontertiary: var(--light__ontertiary_ddssv);
+  --ddss-tertiarycontainer: var(--light__tertiarycontainer_ddssv);
+  --ddss-ontertiarycontainer: var(--light__ontertiarycontainer_ddssv);
+  --ddss-onerror: var(--light__onerror_ddssv);
+  --ddss-errorcontainer: var(--light__errorcontainer_ddssv);
+  --ddss-onerrorcontainer: var(--light__onerrorcontainer_ddssv);
+  --ddss-background: var(--light__background_ddssv);
+  --ddss-onbackground: var(--light__onbackground_ddssv);
+  --ddss-surface: var(--light__surface_ddssv);
+  --ddss-onsurface: var(--light__onsurface_ddssv);
+  --ddss-onsurfacevariant: var(--light__onsurfacevariant_ddssv);
+  --ddss-surfacevariant: var(--light__surfacevariant_ddssv);
+  --ddss-shadow: var(--light__shadow_ddssv);
+  --ddss-inversesurface: var(--light__inversesurface_ddssv);
+  --ddss-scrim: var(--light__scrim_ddssv);
+  --ddss-inverseonsurface: var(--light__inverseonsurface_ddssv);
+  --ddss-inverseprimary: var(--light__inverseprimary_ddssv);
+  --ddss-success: var(--light__success_ddssv);
+  --ddss-onsuccess: var(--light__onsuccess_ddssv);
+  --ddss-successcontainer: var(--light__successcontainer_ddssv);
+  --ddss-onsuccesscontainer: var(--light__onsuccesscontainer_ddssv);
+  --ddss-warning: var(--light__warning_ddssv);
+  --ddss-onwarning: var(--light__onwarning_ddssv);
+  --ddss-warningcontainer: var(--light__warningcontainer_ddssv);
+  --ddss-onwarningcontainer: var(--light__onwarningcontainer_ddssv);
+  --ddss-info: var(--light__info_ddssv);
+  --ddss-oninfo: var(--light__oninfo_ddssv);
+  --ddss-infocontainer: var(--light__infocontainer_ddssv);
+  --ddss-oninfocontainer: var(--light__oninfocontainer_ddssv);
+  --ddss-primaryfixed: var(--light__primaryfixed_ddssv);
+  --ddss-onprimaryfixed: var(--light__onprimaryfixed_ddssv);
+  --ddss-primaryfixeddim: var(--light__primaryfixeddim_ddssv);
+  --ddss-onprimaryfixedvariant: var(--light__onprimaryfixedvariant_ddssv);
+  --ddss-secondaryfixed: var(--light__secondaryfixed_ddssv);
+  --ddss-secondaryfixeddim: var(--light__secondaryfixeddim_ddssv);
+  --ddss-onsecondaryfixed: var(--light__onsecondaryfixed_ddssv);
+  --ddss-onsecondaryfixedvariant: var(--light__onsecondaryfixedvariant_ddssv);
+  --ddss-tertiaryfixed: var(--light__tertiaryfixed_ddssv);
+  --ddss-ontertiaryfixed: var(--light__ontertiaryfixed_ddssv);
+  --ddss-tertiaryfixeddim: var(--light__tertiaryfixeddim_ddssv);
+  --ddss-ontertiaryfixedvariant: var(--light__ontertiaryfixedvariant_ddssv);
+  --ddss-surfacedim: var(--light__surfacedim_ddssv);
+  --ddss-surfacebright: var(--light__surfacebright_ddssv);
+  --ddss-surfacecontainerlowest: var(--light__surfacecontainerlowest_ddssv);
+  --ddss-surfacecontainer: var(--light__surfacecontainer_ddssv);
+  --ddss-surfacecontainerhigh: var(--light__surfacecontainerhigh_ddssv);
+  --ddss-surfacecontainerhighest: var(--light__surfacecontainerhighest_ddssv);
+  --ddss-surfacecontainerlow: var(--light__surfacecontainerlow_ddssv);
+  --ddss-outlinevariant: var(--light__outlinevariant_ddssv);
+  --ddss-outline: var(--light__outline_ddssv);
+  --ddss-error: var(--light__error_ddssv);
+  --ddss-primary: var(--light__primary_ddssv);
+
+  /* Make text look sharper */
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smooth: never;
+
+  /************ Font Size Vars ************/
+
+  /* DEBUGGING TIP: The CSS rules for calc() define unique laws for adding, subtracating, multiplying, and dividing.
+   * In addition and subtraction, both sides must have the same unit.
+   * In multiplication, one side must be unitless.
+   * In division, the right side must be unitless.
+  */
+
+  --display1-font-size: calc(1em * pow(var(--ddss-wholestep), 3));
+  --display2-font-size: calc(1em * var(--ddss-wholestep) * var(--ddss-wholestep));
+  --title1-font-size: calc(1em * var(--ddss-wholestep) * var(--ddss-halfstep));
+  --title2-font-size: calc(1em * var(--ddss-wholestep));
+  --title3-font-size: calc(1em * var(--ddss-halfstep));
+  --heading-font-size: calc(1em * var(--ddss-quarterstep));
+  --subheading-font-size: calc(1em / var(--ddss-quarterstep));
+  --body-font-size: 1em;
+  --callout-font-size: calc(1em / var(--ddss-eighthstep));
+  --label-font-size: calc((1em / var(--ddss-quarterstep)) / var(--ddss-eighthstep));
+  --caption-font-size: calc(1em / var(--ddss-halfstep));
+  --capline-font-size: calc(1em / var(--ddss-halfstep));
+
+  /* Font Line Height Vars (UNITLESS!) */
+
+  --display1-line-height: var(--ddss-quarterstep);
+  --display2-line-height: var(--ddss-halfstep);
+  --title1-line-height: var(--ddss-halfstep);
+  --title2-line-height: var(--ddss-halfstep);
+  --title3-line-height: var(--ddss-halfstep);
+  --heading-line-height: var(--ddss-halfstep);
+  --subheading-line-height: var(--ddss-halfstep);
+  --body-line-height: var(--ddss-wholestep);
+  --callout-line-height: var(--ddss-halfstep);
+  --label-line-height: var(--ddss-halfstep);
+  --caption-line-height: var(--ddss-halfstep);
+  --capline-line-height: var(--ddss-halfstep);
+
+  /* Optical Top Padding Offsets and Border Radii for Cards */
+  --display1-offset: calc(var(--display1-font-size) * calc(var(--display1-line-height) / var(--ddss-wholestep)));
+  --display2-offset: calc(var(--display2-font-size) * calc(var(--display2-line-height) / var(--ddss-wholestep)));
+  --title1-offset: calc(var(--title1-font-size) * calc(var(--title1-line-height) / var(--ddss-wholestep)));
+  --title2-offset: calc(var(--title2-font-size) * calc(var(--title2-line-height) / var(--ddss-wholestep)));
+  --title3-offset: calc(var(--title3-font-size) * calc(var(--title3-line-height) / var(--ddss-wholestep)));
+  --heading-offset: calc(var(--heading-font-size) * calc(var(--heading-line-height) / var(--ddss-wholestep)));
+  --subheading-offset: calc(var(--subheading-font-size) * calc(var(--subheading-line-height) / var(--ddss-wholestep)));
+  --body-offset: calc(var(--body-font-size) / var(--ddss-wholestep));
+  --callout-offset: calc(var(--callout-font-size) * calc(var(--callout-line-height) / var(--ddss-wholestep)));
+  --label-offset: calc(var(--label-font-size) * calc(var(--label-line-height) / var(--ddss-wholestep)));
+  --caption-offset: calc(var(--caption-font-size) * calc(var(--caption-line-height) / var(--ddss-wholestep)));
+  --capline-offset: calc(var(--capline-font-size) * calc(var(--capline-line-height) / var(--ddss-wholestep)));
+
+  /* shadows */
+  --shadow-sm: 0 0 1px 0 var(--ddss-shadow);
+  --shadow-md:
+    0 4px 6px rgba(0, 0, 0, 0.08), 0 2px 4px rgba(0, 0, 0, 0.11),
+    0 0 1px rgba(0, 0, 0, 0.4);
+  --shadow-lg:
+    0 11px 15px -3px rgba(0, 0, 0, 0.11), 0 2px 6px rgba(0, 0, 0, 0.07),
+    0 0 1px rgba(0, 0, 0, 0.4);
+  --shadow-xl:
+    0px 0px 1px 0px var(--ddss-outline), 0px 50px 100px 0px rgba(0, 0, 0, 0.15);
+  --shadow-2xl:
+    0 25px 50px rgba(0, 0, 0, 0.23), 0 9px 18px rgba(0, 0, 0, 0.1),
+    0 0 1px rgba(0, 0, 0, 0.4);
+
+  /* Global Scale Factors - Used for ad hoc calculations in the component tree leaves */
+
+  --display1BoxHeight: calc(var(--display1-font-size) * var(--display1-line-height));
+  --display2BoxHeight: calc(var(--display2-font-size) * var(--display2-line-height));
+  --title1BoxHeight: calc(var(--title1-font-size) * var(--title1-line-height));
+  --title2BoxHeight: calc(var(--title2-font-size) * var(--title2-line-height));
+  --title3BoxHeight: calc(var(--title3-font-size) * var(--title3-line-height));
+  --headingBoxHeight: calc(var(--heading-font-size) * var(--heading-line-height));
+  --subheadingBoxHeight: calc(var(--subheading-font-size) * var(--subheading-line-height));
+  --bodyBoxHeight: calc(var(--body-font-size) * var(--body-line-height));
+  --calloutBoxHeight: calc(var(--callout-font-size) * var(--callout-line-height));
+  --labelBoxHeight: calc(var(--label-font-size) * var(--label-line-height));
+  --captionBoxHeight: calc(var(--caption-font-size) * var(--caption-line-height));
+  --caplineBoxHeight: calc(var(--capline-font-size) * var(--capline-line-height));
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+
+  :root {
+    --ddss-onprimary: var(--dark__onprimary_ddssv);
+    --ddss-primarycontainer: var(--dark__primarycontainer_ddssv);
+    --ddss-onprimarycontainer: var(--dark__onprimarycontainer_ddssv);
+    --ddss-secondary: var(--dark__secondary_ddssv);
+    --ddss-onsecondary: var(--dark__onsecondary_ddssv);
+    --ddss-secondarycontainer: var(--dark__secondarycontainer_ddssv);
+    --ddss-onsecondarycontainer: var(--dark__onsecondarycontainer_ddssv);
+    --ddss-tertiary: var(--dark__tertiary_ddssv);
+    --ddss-ontertiary: var(--dark__ontertiary_ddssv);
+    --ddss-tertiarycontainer: var(--dark__tertiarycontainer_ddssv);
+    --ddss-ontertiarycontainer: var(--dark__ontertiarycontainer_ddssv);
+    --ddss-onerror: var(--dark__onerror_ddssv);
+    --ddss-errorcontainer: var(--dark__errorcontainer_ddssv);
+    --ddss-onerrorcontainer: var(--dark__onerrorcontainer_ddssv);
+    --ddss-background: var(--dark__background_ddssv);
+    --ddss-onbackground: var(--dark__onbackground_ddssv);
+    --ddss-surface: var(--dark__surface_ddssv);
+    --ddss-onsurface: var(--dark__onsurface_ddssv);
+    --ddss-onsurfacevariant: var(--dark__onsurfacevariant_ddssv);
+    --ddss-surfacevariant: var(--dark__surfacevariant_ddssv);
+    --ddss-shadow: var(--dark__shadow_ddssv);
+    --ddss-inversesurface: var(--dark__inversesurface_ddssv);
+    --ddss-scrim: var(--dark__scrim_ddssv);
+    --ddss-inverseonsurface: var(--dark__inverseonsurface_ddssv);
+    --ddss-inverseprimary: var(--dark__inverseprimary_ddssv);
+    --ddss-success: var(--dark__success_ddssv);
+    --ddss-onsuccess: var(--dark__onsuccess_ddssv);
+    --ddss-successcontainer: var(--dark__successcontainer_ddssv);
+    --ddss-onsuccesscontainer: var(--dark__onsuccesscontainer_ddssv);
+    --ddss-warning: var(--dark__warning_ddssv);
+    --ddss-onwarning: var(--dark__onwarning_ddssv);
+    --ddss-warningcontainer: var(--dark__warningcontainer_ddssv);
+    --ddss-onwarningcontainer: var(--dark__onwarningcontainer_ddssv);
+    --ddss-info: var(--dark__info_ddssv);
+    --ddss-oninfo: var(--dark__oninfo_ddssv);
+    --ddss-infocontainer: var(--dark__infocontainer_ddssv);
+    --ddss-oninfocontainer: var(--dark__oninfocontainer_ddssv);
+    --ddss-primaryfixed: var(--dark__primaryfixed_ddssv);
+    --ddss-onprimaryfixed: var(--dark__onprimaryfixed_ddssv);
+    --ddss-primaryfixeddim: var(--dark__primaryfixeddim_ddssv);
+    --ddss-onprimaryfixedvariant: var(--dark__onprimaryfixedvariant_ddssv);
+    --ddss-secondaryfixed: var(--dark__secondaryfixed_ddssv);
+    --ddss-secondaryfixeddim: var(--dark__secondaryfixeddim_ddssv);
+    --ddss-onsecondaryfixed: var(--dark__onsecondaryfixed_ddssv);
+    --ddss-onsecondaryfixedvariant: var(--dark__onsecondaryfixedvariant_ddssv);
+    --ddss-tertiaryfixed: var(--dark__tertiaryfixed_ddssv);
+    --ddss-ontertiaryfixed: var(--dark__ontertiaryfixed_ddssv);
+    --ddss-tertiaryfixeddim: var(--dark__tertiaryfixeddim_ddssv);
+    --ddss-ontertiaryfixedvariant: var(--dark__ontertiaryfixedvariant_ddssv);
+    --ddss-surfacedim: var(--dark__surfacedim_ddssv);
+    --ddss-surfacebright: var(--dark__surfacebright_ddssv);
+    --ddss-surfacecontainerlowest: var(--dark__surfacecontainerlowest_ddssv);
+    --ddss-surfacecontainer: var(--dark__surfacecontainer_ddssv);
+    --ddss-surfacecontainerhigh: var(--dark__surfacecontainerhigh_ddssv);
+    --ddss-surfacecontainerhighest: var(--dark__surfacecontainerhighest_ddssv);
+    --ddss-surfacecontainerlow: var(--dark__surfacecontainerlow_ddssv);
+    --ddss-outlinevariant: var(--dark__outlinevariant_ddssv);
+    --ddss-outline: var(--dark__outline_ddssv);
+    --ddss-error: var(--dark__error_ddssv);
+    --ddss-primary: var(--dark__primary_ddssv);
+  }
+}

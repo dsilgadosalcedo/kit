@@ -1,0 +1,33 @@
+[data-ddss-component="snackbar"] {
+  display: inline-flex;
+  align-items: center;
+  padding: calc(var(--body-line-height) * var(--ddss-halfstep-dec));
+  gap: var(--ddss-size-sm);
+  border-radius: calc(var(--callout-line-height) * var(--ddss-wholestep-dec));
+  /* background-color: var(--ddss-primary); */
+  color: var(--ddss-onsurface);
+  box-shadow: var(--shadow-xs);
+
+  [data-ddss-slot="snackbar-text"] {
+    flex: 1 0 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  [data-ddss-slot="snackbar-icon"] {
+    width: 1em;
+    height: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--heading-font-size);
+    transform: translateY(-0.25px);
+    margin-right: calc(1em / var(--ddss-halfstep));
+  }
+
+  [data-ddss-slot="snackbar-actions"] {
+    margin-left: calc(1em / var(--ddss-halfstep));
+  }
+
+}

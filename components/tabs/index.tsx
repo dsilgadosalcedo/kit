@@ -1,0 +1,51 @@
+"use client";
+
+import { useMemo } from "react";
+import { propsToDataAttrs } from "@/lib/utilities";
+import TabMenu from "@/components/tab-menu";
+import "@/components/tabs/tabs.css";
+import { useState, useEffect } from "react";
+
+interface DdssTabsProps extends React.HTMLAttributes<HTMLDivElement> {
+  tabLinks: string[];
+  children: React.ReactNode[];
+  scrollableContent?: boolean; // Optional prop to enable scrollable content
+  onActiveTabChange?: (index: number) => void; // Optional function to lift state
+}
+
+export default function Tabs({ tabLinks, onActiveTabChange, scrollableContent, children, ...restProps }: DdssTabsProps) {
+  const [activeTab, setActiveTab] = useState(0);
+
+  const handleTabClick = (index: number) => {
+    setActiveTab(index); // Set the clicked tab as active
+
+  };
+
+  useEffect(() => {
+    if (onActiveTabChange) {
+      onActiveTabChange(activeTab);
+    }
+  }, [activeTab, onActiveTabChange]);
+
+  const dataAttrs = useMemo(() => propsToDataAttrs({ activeTab }, "tabs"), [activeTab]);
+
+  return (
+    <div data-ddss-component="tabs" data-ddss-tabs-content-scrollable={scrollableContent} {...dataAttrs} {...restProps}>
+      <TabMenu
+        tabLinks={tabLinks}
+        justifyContent="start"
+        alignItems="stretch"
+        activeTab={activeTab}
+        setActiveTab={setActiveTab}
+        onClick={handleTabClick}
+      />
+      <div data-ddss-tabs-el="tab-content" data-ddss-tabs-content-scrollable={scrollableContent}>
+        {children.map((child, index) => (
+          <div key={index} style={{ display: index === activeTab ? "block" : "none" }}>
+            {child }
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}

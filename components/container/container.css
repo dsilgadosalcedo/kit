@@ -1,0 +1,6 @@
+[ddss-component="container"] {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: var(--ddss-container-max-width, 100%);
+}

@@ -1,0 +1,123 @@
+export {};
+
+declare global {
+  /**
+   * Represents all valid LiftKit color tokens.
+   */
+  type DdssColor =
+    | "primary"
+    | "onprimary"
+    | "primarycontainer"
+    | "onprimarycontainer"
+    | "secondary"
+    | "onsecondary"
+    | "secondarycontainer"
+    | "onsecondarycontainer"
+    | "tertiary"
+    | "ontertiary"
+    | "tertiarycontainer"
+    | "ontertiarycontainer"
+    | "error"
+    | "onerror"
+    | "errorcontainer"
+    | "onerrorcontainer"
+    | "background"
+    | "onbackground"
+    | "surface"
+    | "onsurface"
+    | "surfacevariant"
+    | "onsurfacevariant"
+    | "shadow"
+    | "inversesurface"
+    | "scrim"
+    | "inverseonsurface"
+    | "inverseprimary"
+    | "success"
+    | "onsuccess"
+    | "successcontainer"
+    | "onsuccesscontainer"
+    | "warning"
+    | "onwarning"
+    | "warningcontainer"
+    | "onwarningcontainer"
+    | "info"
+    | "oninfo"
+    | "infocontainer"
+    | "oninfocontainer"
+    | "primaryfixed"
+    | "onprimaryfixed"
+    | "primaryfixeddim"
+    | "onprimaryfixedvariant"
+    | "secondaryfixed"
+    | "onsecondaryfixed"
+    | "secondaryfixeddim"
+    | "onsecondaryfixedvariant"
+    | "tertiaryfixed"
+    | "ontertiaryfixed"
+    | "tertiaryfixeddim"
+    | "ontertiaryfixedvariant"
+    | "surfacedim"
+    | "surfacebright"
+    | "surfacecontainerlowest"
+    | "surfacecontainerlow"
+    | "surfacecontainer"
+    | "surfacecontainerhigh"
+    | "surfacecontainerhighest"
+    | "outline"
+    | "outlinevariant"
+    | "transparent";
+
+  /**
+   * Represents a subset of LiftKit color tokens that have explicitly defined "on-" swatches to match them.
+   * For example, it includes "ddss-primary", because "ddss-onprimary" exists.
+   * It also includes "ddss-primarycontainer", because "ddss-onprimarycontainer" exists.
+   * It does not include "ddss-outline," however, because "ddss-onoutline" does not exist.
+   * The one exception to this rule is the 'surfacecontainer' tokens, which pair with 'ddss-onsurface' as their on-token.
+   */
+  // TODO: Missing some types casing issues
+  type DdssColorWithOnToken =
+    | "primary"
+    | "primarycontainer"
+    | "secondary"
+    | "secondarycontainer"
+    | "tertiary"
+    | "tertiarycontainer"
+    | "error"
+    | "errorcontainer"
+    | "success"
+    | "successcontainer"
+    | "warning"
+    | "warningcontainer"
+    | "info"
+    | "infocontainer"
+    | "background"
+    | "surface"
+    | "surfacevariant"
+    | "surfacecontainerlowest" //todo: make sure component assigns "onsurface" to text when these are present
+    | "surfacecontainerlow"
+    | "surfacecontainer"
+    | "surfacecontainerhigh"
+    | "surfacecontainerhighest"
+    | "inversesurface"
+    | "transparent"
+
+  type DdssOnColor =
+    | "onprimary"
+    | "onprimarycontainer"
+    | "onsecondary"
+    | "onsecondarycontainer"
+    | "ontertiary"
+    | "ontertiarycontainer"
+    | "onerror"
+    | "onerrorcontainer"
+    | "onsuccess"
+    | "onsuccesscontainer"
+    | "onwarning"
+    | "onwarningcontainer"
+    | "oninfo"
+    | "oninfocontainer"
+    | "onbackground"
+    | "onsurface"
+    | "onsurfacevariant"
+    | "inverseonsurface";
+}

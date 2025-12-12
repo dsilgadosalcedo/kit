@@ -1,0 +1,6 @@
+[data-ddss-component="placeholder-block"] {
+  display: block;
+  border: 1px dashed var(--ddss-info);
+  background-color: var(--ddss-infocontainer);
+  padding: var(--ddss-size-md);
+}
